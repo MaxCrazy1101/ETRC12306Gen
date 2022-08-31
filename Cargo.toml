@@ -1,0 +1,25 @@
+[package]
+name = "etrc12306gen"
+authors = ["Alex Newton <sharenfan222@gmail.com>"]
+version = "0.0.1"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "3.2", features = ["derive"] }
+log = "0.4"
+env_logger = "0.9"
+pretty_env_logger = { git = "https://github.com/seanmonstar/pretty-env-logger.git" }
+reqwest = { version = "0.11", features = ["json", "blocking"] }
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+lazy_static = "1.4"
+chrono = "0.4.22"
+
+
+[profile.release]
+lto = true
+opt-level = "z"
+# panic = "abort"
+codegen-units = 1
