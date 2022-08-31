@@ -1,7 +1,7 @@
 # ETRC12306Gen
 
-## Features
- - 
+## 备注
+ - 部分API参考[cParsing12306](https://github.com/denglihong2007/cParsing_12306)
  - 
  - 
 
@@ -10,8 +10,9 @@
 In the GitHub Releases of this repository we provide [archives of precompiled binaries](https://github.com/Diaosi1111/ETRC12306GEN/releases) of this program, available for **Linux**, **Windows**, and **macOS**.
 
 
-## Usage (CLI)
-
+## 使用方法 (CLI)
+```
+```
 
 ### Train
 
