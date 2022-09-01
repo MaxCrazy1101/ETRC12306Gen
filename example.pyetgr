@@ -1,0 +1,916 @@
+{
+    "circuits": [
+        {
+            "model": "",
+            "name": "K4293-4",
+            "note": "25G型DC600V",
+            "order": [
+                {
+                    "checi": "K4293",
+                    "end": "",
+                    "link": true,
+                    "start": "",
+                    "virtual": false
+                },
+                {
+                    "checi": "K4294",
+                    "end": "",
+                    "link": true,
+                    "start": "",
+                    "virtual": false
+                }
+            ],
+            "owner": ""
+        },
+        {
+            "model": "",
+            "name": "K4707-8",
+            "note": "广铁绿皮",
+            "order": [
+                {
+                    "checi": "K4706/7",
+                    "end": "",
+                    "link": true,
+                    "start": "",
+                    "virtual": false
+                },
+                {
+                    "checi": "K4708/5",
+                    "end": "",
+                    "link": true,
+                    "start": "",
+                    "virtual": false
+                }
+            ],
+            "owner": ""
+        }
+    ],
+    "config": {
+        "auto_paint": true,
+        "avoid_cover": true,
+        "base_label_height": 15,
+        "bold_grid_width": 2.5,
+        "bold_line_level": 2,
+        "default_colors": {
+            "default": "#008000",
+            "临客": "#008000",
+            "动检": "#008000",
+            "动车": "#804000",
+            "动车组": "#804000",
+            "区段": "#008000",
+            "单机": "#008000",
+            "城际": "#ff33cc",
+            "客车底": "#008000",
+            "小运转": "#008000",
+            "快速": "#ff0000",
+            "摘挂": "#008000",
+            "旅游": "#008000",
+            "普客": "#008000",
+            "普快": "#008000",
+            "特快": "#0000ff",
+            "特快行包": "#008000",
+            "班列": "#008000",
+            "直货": "#008000",
+            "直达": "#008000",
+            "直达特快": "#ff00ff",
+            "行包": "#008000",
+            "补机": "#008000",
+            "试运转": "#008000",
+            "路用": "#008000",
+            "通勤": "#008000",
+            "高速": "#ff00be"
+        },
+        "default_db_file": "D:/Python/train_graph/linesNew.pyetlib",
+        "default_grid_width": 1,
+        "default_huoche_width": 0.75,
+        "default_keche_width": 1.5,
+        "end_hour": 3,
+        "end_label_checi": true,
+        "end_label_height": 15,
+        "grid_color": "#00ff00",
+        "line_styles": {
+            "default": [
+                1,
+                1
+            ],
+            "临客": [
+                1,
+                1.5
+            ],
+            "动检": [
+                1,
+                1.5
+            ],
+            "动车": [
+                1,
+                1
+            ],
+            "动车组": [
+                1,
+                1.5
+            ],
+            "区段": [
+                1,
+                0.75
+            ],
+            "单机": [
+                1,
+                0.75
+            ],
+            "城际": [
+                1,
+                1.5
+            ],
+            "客车底": [
+                1,
+                1.5
+            ],
+            "小运转": [
+                1,
+                0.75
+            ],
+            "快速": [
+                1,
+                1.5
+            ],
+            "摘挂": [
+                1,
+                0.75
+            ],
+            "旅游": [
+                1,
+                1.5
+            ],
+            "普客": [
+                1,
+                1.5
+            ],
+            "普快": [
+                1,
+                1.5
+            ],
+            "特快": [
+                1,
+                1.5
+            ],
+            "特快行包": [
+                1,
+                1.5
+            ],
+            "班列": [
+                1,
+                0.75
+            ],
+            "直货": [
+                1,
+                0.75
+            ],
+            "直达": [
+                1,
+                0.75
+            ],
+            "直达特快": [
+                1,
+                1.5
+            ],
+            "行包": [
+                1,
+                0.75
+            ],
+            "补机": [
+                1,
+                0.75
+            ],
+            "试运转": [
+                1,
+                0.75
+            ],
+            "路用": [
+                1,
+                1.5
+            ],
+            "通勤": [
+                1,
+                1.5
+            ],
+            "高速": [
+                1,
+                1.5
+            ]
+        },
+        "link_line_height": 10,
+        "margins": {
+            "down": 90,
+            "first_row_append": 15,
+            "gap_between_railways": 150,
+            "label_width": 100,
+            "left": 325,
+            "left_white": 15,
+            "mile_label_width": 50,
+            "right": 170,
+            "right_white": 10,
+            "ruler_label_width": 100,
+            "title_row_height": 40,
+            "up": 90
+        },
+        "max_passed_stations": 25,
+        "minute_mark_gap_pix": 200,
+        "minutes_per_vertical_line": 10,
+        "not_show_types": [
+        ],
+        "pixels_per_km": 4,
+        "seconds_per_pix": 20,
+        "seconds_per_pix_y": 8,
+        "showFullCheci": false,
+        "show_count_bar": true,
+        "show_line_in_station": true,
+        "show_mile_bar": true,
+        "show_ruler_bar": true,
+        "show_time_mark": 1,
+        "start_hour": 6,
+        "start_label_height": 30,
+        "step_label_height": 20,
+        "table_row_height": 30,
+        "text_color": "#0000ff",
+        "type_regex": [
+            [
+                "高速",
+                "G\\d+",
+                true
+            ],
+            [
+                "动车组",
+                "D\\d+",
+                true
+            ],
+            [
+                "城际",
+                "C\\d+",
+                true
+            ],
+            [
+                "直达特快",
+                "Z\\d+",
+                true
+            ],
+            [
+                "特快",
+                "T\\d+",
+                true
+            ],
+            [
+                "快速",
+                "K\\d+",
+                true
+            ],
+            [
+                "普快",
+                "[1-5]\\d{3}",
+                true
+            ],
+            [
+                "普客",
+                "6\\d{3}",
+                true
+            ],
+            [
+                "普客",
+                "7[1-5]\\d{2}",
+                true
+            ],
+            [
+                "通勤",
+                "7\\d{3}",
+                true
+            ],
+            [
+                "通勤",
+                "8\\d{3}",
+                true
+            ],
+            [
+                "旅游",
+                "Y\\d+",
+                true
+            ],
+            [
+                "路用",
+                "57\\d+",
+                true
+            ],
+            [
+                "特快行包",
+                "X1\\d{2}",
+                true
+            ],
+            [
+                "动检",
+                "DJ\\d+",
+                true
+            ],
+            [
+                "客车底",
+                "0[GDCZTKY]\\d+",
+                true
+            ],
+            [
+                "临客",
+                "L\\d+",
+                true
+            ],
+            [
+                "客车底",
+                "0\\d{4}",
+                true
+            ],
+            [
+                "行包",
+                "X\\d{3}",
+                false
+            ],
+            [
+                "班列",
+                "X\\d{4}",
+                false
+            ],
+            [
+                "直达",
+                "1\\d{4}",
+                false
+            ],
+            [
+                "直货",
+                "2\\d{4}",
+                false
+            ],
+            [
+                "区段",
+                "3\\d{4}",
+                false
+            ],
+            [
+                "摘挂",
+                "4[0-4]\\d{3}",
+                false
+            ],
+            [
+                "小运转",
+                "4[5-9]\\d{3}",
+                false
+            ],
+            [
+                "单机",
+                "5[0-2]\\d{3}",
+                false
+            ],
+            [
+                "补机",
+                "5[3-4]\\d{3}",
+                false
+            ],
+            [
+                "试运转",
+                "55\\d{3}",
+                false
+            ]
+        ],
+        "valid_width": 3
+    },
+    "line": {
+        "forbid": {
+            "different": true,
+            "downShow": false,
+            "nodes": [
+            ],
+            "upShow": false
+        },
+        "forbid2": {
+            "different": true,
+            "downShow": false,
+            "nodes": [
+            ],
+            "upShow": false
+        },
+        "name": "西安-杭州",
+        "notes": {
+            "author": "",
+            "note": "",
+            "version": ""
+        },
+        "ordinate": null,
+        "rulers": [
+        ],
+        "stations": [
+            {
+                "counter": 0,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 0,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "南京"
+            },
+            {
+                "counter": 64,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 64,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "镇江"
+            },
+            {
+                "counter": 77,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 77,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "丹徒"
+            },
+            {
+                "counter": 91,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 91,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "丹阳"
+            },
+            {
+                "counter": 135,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 135,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "常州"
+            },
+            {
+                "counter": 146,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 146,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "戚墅堰"
+            },
+            {
+                "counter": 174,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 174,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "无锡"
+            },
+            {
+                "counter": 216,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 216,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "苏州"
+            },
+            {
+                "counter": 251,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 251,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "昆山"
+            },
+            {
+                "counter": 279,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 279,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "黄渡"
+            },
+            {
+                "counter": 286,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 286,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "封浜"
+            },
+            {
+                "counter": 298,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 298,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "七宝"
+            },
+            {
+                "counter": 307,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 307,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "春申"
+            },
+            {
+                "counter": 312,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 312,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "新桥"
+            },
+            {
+                "counter": 323,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 323,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "松江"
+            },
+            {
+                "counter": 349,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 349,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "枫泾"
+            },
+            {
+                "counter": 359,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 359,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "嘉善"
+            },
+            {
+                "counter": 377,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 377,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "嘉兴"
+            },
+            {
+                "counter": 405,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 405,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "海宁"
+            },
+            {
+                "counter": 458,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 458,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "笕桥"
+            },
+            {
+                "counter": 464,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 464,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "艮山门"
+            },
+            {
+                "counter": 470,
+                "dengji": 4,
+                "direction": 3,
+                "freight": true,
+                "licheng": 470,
+                "passenger": true,
+                "show": true,
+                "tracks": [
+                ],
+                "zhanming": "杭州"
+            }
+        ]
+    },
+    "markdown": "2019.1.25爬取图定运行图。\n1.28 爬取数据增加K4293。",
+    "trains": [
+        {
+            "UI": {
+            },
+            "autoItem": true,
+            "checi": [
+                "z86",
+                "Z87",
+                "Z86"
+            ],
+            "passenger": 1,
+            "sfz": "杭州",
+            "shown": true,
+            "timetable": [
+                {
+                    "business": true,
+                    "cfsj": "16:43:00",
+                    "ddsj": "16:43:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "杭州"
+                },
+                {
+                    "business": true,
+                    "cfsj": "17:21:00",
+                    "ddsj": "17:18:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "海宁"
+                },
+                {
+                    "business": true,
+                    "cfsj": "17:40:00",
+                    "ddsj": "17:37:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "嘉兴"
+                },
+                {
+                    "business": true,
+                    "cfsj": "19:18:00",
+                    "ddsj": "19:15:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "苏州"
+                },
+                {
+                    "business": true,
+                    "cfsj": "19:43:00",
+                    "ddsj": "19:40:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "无锡"
+                },
+                {
+                    "business": true,
+                    "cfsj": "21:14:00",
+                    "ddsj": "21:08:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "南京"
+                },
+                {
+                    "business": true,
+                    "cfsj": "09:12:00",
+                    "ddsj": "09:12:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "西安"
+                }
+            ],
+            "type": "直达",
+            "zdz": "西安"
+        },
+        {
+            "UI": {
+            },
+            "autoItem": true,
+            "checi": [
+                "t114",
+                "T111",
+                "T114"
+            ],
+            "passenger": 1,
+            "sfz": "兰州",
+            "shown": true,
+            "timetable": [
+                {
+                    "business": true,
+                    "cfsj": "13:56:00",
+                    "ddsj": "13:56:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "兰州"
+                },
+                {
+                    "business": true,
+                    "cfsj": "16:05:00",
+                    "ddsj": "16:01:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "陇西"
+                },
+                {
+                    "business": true,
+                    "cfsj": "16:57:00",
+                    "ddsj": "16:54:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "甘谷"
+                },
+                {
+                    "business": true,
+                    "cfsj": "18:24:00",
+                    "ddsj": "18:18:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "天水"
+                },
+                {
+                    "business": true,
+                    "cfsj": "21:29:00",
+                    "ddsj": "21:09:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "宝鸡"
+                },
+                {
+                    "business": true,
+                    "cfsj": "23:11:00",
+                    "ddsj": "22:51:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "咸阳"
+                },
+                {
+                    "business": true,
+                    "cfsj": "23:47:00",
+                    "ddsj": "23:39:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "西安"
+                },
+                {
+                    "business": true,
+                    "cfsj": "04:31:00",
+                    "ddsj": "04:26:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "洛阳"
+                },
+                {
+                    "business": true,
+                    "cfsj": "06:08:00",
+                    "ddsj": "06:01:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "郑州"
+                },
+                {
+                    "business": true,
+                    "cfsj": "09:22:00",
+                    "ddsj": "09:16:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "徐州"
+                },
+                {
+                    "business": true,
+                    "cfsj": "10:59:00",
+                    "ddsj": "10:53:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "蚌埠"
+                },
+                {
+                    "business": true,
+                    "cfsj": "13:11:00",
+                    "ddsj": "13:05:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "南京"
+                },
+                {
+                    "business": true,
+                    "cfsj": "14:37:00",
+                    "ddsj": "14:34:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "常州"
+                },
+                {
+                    "business": true,
+                    "cfsj": "15:08:00",
+                    "ddsj": "15:04:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "无锡"
+                },
+                {
+                    "business": true,
+                    "cfsj": "15:40:00",
+                    "ddsj": "15:37:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "苏州"
+                },
+                {
+                    "business": true,
+                    "cfsj": "16:09:00",
+                    "ddsj": "16:06:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "昆山"
+                },
+                {
+                    "business": true,
+                    "cfsj": "17:29:00",
+                    "ddsj": "17:23:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "嘉兴"
+                },
+                {
+                    "business": true,
+                    "cfsj": "17:50:00",
+                    "ddsj": "17:47:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "海宁"
+                },
+                {
+                    "business": true,
+                    "cfsj": "18:50:00",
+                    "ddsj": "18:50:00",
+                    "note": "",
+                    "track": "0",
+                    "zhanming": "杭州"
+                }
+            ],
+            "type": "快速",
+            "zdz": "杭州"
+        }
+    ],
+    "version": ""
+}

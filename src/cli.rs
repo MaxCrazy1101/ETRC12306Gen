@@ -14,7 +14,7 @@ pub struct Cli {
     pub date: Option<String>,
 
     /// 使用http代理 输入格式 ip:port
-    #[clap(group = "input",value_parser=check_proxy)]
+    #[clap(short, long, group = "input",value_parser=check_proxy)]
     pub proxy: Option<Proxy>,
 
     /// (未实现)规则文件（UTF-8编码，格式为A B 1 0，意为将A站改为B站且把到达时间推迟一分钟设为通过状态）
@@ -27,7 +27,9 @@ pub struct Cli {
 impl Cli {
     pub fn run(&self) -> Result<(), Box<dyn std::error::Error>> {
         pretty_env_logger::init();
-        let mut builder = Client::builder().timeout(time::Duration::from_secs(7));
+        let mut builder = Client::builder()
+            .cookie_store(true)
+            .timeout(time::Duration::from_secs(7));
         if let Some(proxy) = &self.proxy {
             debug!("proxy:{:?}", proxy);
             builder = builder.proxy(proxy.clone());
@@ -35,7 +37,7 @@ impl Cli {
         let http_client = builder.build().expect("创建http客户端失败");
         let date = match &self.date {
             Some(d) => d.clone(),
-            None => "20220901".to_string(),
+            None => "20220902".to_string(),
         };
         match &self.command {
             Commands::Train(train) => train.run(date, http_client),

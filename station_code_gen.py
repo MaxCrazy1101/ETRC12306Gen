@@ -1,5 +1,7 @@
 import requests
 
+
+
 source=requests.get("https://kyfw.12306.cn/otn/resources/js/framework/station_name.js?station_version=1.9238").text
 
 with open("./src/consts.rs","w",encoding="utf-8") as f:

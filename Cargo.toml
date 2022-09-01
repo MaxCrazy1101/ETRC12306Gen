@@ -11,7 +11,7 @@ clap = { version = "3.2", features = ["derive"] }
 log = "0.4"
 env_logger = "0.9"
 pretty_env_logger = { git = "https://github.com/seanmonstar/pretty-env-logger.git" }
-reqwest = { version = "0.11", features = ["json", "blocking"] }
+reqwest = { version = "0.11", features = ["json", "blocking", "cookies"] }
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 lazy_static = "1.4"
