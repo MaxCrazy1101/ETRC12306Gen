@@ -1,4 +1,4 @@
-use std::time;
+use std::{env, time};
 
 use clap::{Args, Parser, Subcommand};
 use log::debug;
@@ -26,7 +26,16 @@ pub struct Cli {
 }
 impl Cli {
     pub fn run(&self) -> Result<(), Box<dyn std::error::Error>> {
+        // 初始化log
+        let env_log = env::var("RUST_LOG");
+        let log_level = if let Ok(env_log) = &env_log {
+            env_log.as_str()
+        } else {
+            "info"
+        };
+        env::set_var("RUST_LOG", log_level);
         pretty_env_logger::init();
+
         let mut builder = Client::builder()
             .cookie_store(true)
             .timeout(time::Duration::from_secs(7));

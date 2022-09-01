@@ -33,7 +33,7 @@ pub fn parse_line(
         from_value(from_slice::<serde_json::Value>(&data)?["line"]["stations"].clone())?;
     debug!("开始读取Cookie");
     let mut cookie: Vec<u8> = vec![];
-    match OpenOptions::new()
+    if OpenOptions::new()
         .create(true)
         .write(true)
         .read(true)
@@ -41,9 +41,9 @@ pub fn parse_line(
         .expect("创建cookie.txt文件失败")
         .read_to_end(&mut cookie)
         .expect("读取失败cookie.txt文件失败")
+        == 0
     {
-        0 => panic!("读取cookie.txt失败, 文件为空，请填入cookie后再使用"),
-        _ => (),
+        panic!("读取cookie.txt失败, 文件为空，请填入cookie后再使用");
     }
     let cookie = String::from_utf8(cookie)?;
     debug!("加载Cookie成功");
@@ -226,5 +226,6 @@ pub fn parse_train(
         train_history.push(train_number.0);
         train_history.push(train_number.1);
     }
+    info!("获取时刻表任务完成");
     Ok(())
 }
